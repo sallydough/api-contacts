@@ -1,0 +1,38 @@
+/* Make it pretty */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.gallery img {
+  margin: 0.5em;
+}
+
+.contact-card {
+padding: 20px;
+ background-color: rgb(238, 238, 238);
+ width: 400px;
+ height: 400px;
+ text-align: center;
+ border-radius: 30px;
+ color: rgb(84, 84, 103);
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contact-card:hover {
+  background-color: rgb(77, 45, 240);
+  color: white;
+}
+
+
+.contact-card h1 {
+  font-size: 50px;
+}
+
+.contact-card h2 {
+font-size: 30px;
+}
