@@ -1,32 +1,38 @@
 // An array of objects that now replace the array of numbers from last session
 const contacts = [
   {
-    id:           "Lema",
+    id: 1,
+    name:           "Lema",
     title:        '403-123-4567',
     image: "https://static.thenounproject.com/png/196436-200.png"
   },
   {
-    id:           "Meseret",
+    id: 2,
+    name:           "Meseret",
     title:        '4363848484',
     image: "https://static.thenounproject.com/png/196436-200.png"
   },
   {
-    id:           "Sally",
+    id: 3,
+    name:           "Sally",
     title:        '403-123-4567',
     image: "https://static.thenounproject.com/png/196436-200.png"
   },
   {
-    id:           "Mark",
+    id: 4,
+    name:           "Mark",
     title:        '4363848484',
     image: "https://static.thenounproject.com/png/196436-200.png"
   },
   {
-    id:           "Larry",
+    id: 5,
+    name:           "Larry",
     title:        '403-123-4567',
     image: "https://static.thenounproject.com/png/196436-200.png"
   },
   {
-    id:           "Medhekj",
+    id: 6,
+    name:           "Medhekj",
     title:        '4363848484',
     image: "https://static.thenounproject.com/png/196436-200.png"
   }
@@ -40,15 +46,13 @@ let content = '';
 */
 for (const person of contacts) {
   
-  content += `<div onClick=call() class="contact-card">
+  content += `<div class="contact-card">
   <div class="image-container">
   <img src="${person.image}" alt="" />
   </div>
-  <h1 class='contact-list-name' id="${person.id}">${person.id}</h1>
+  <h1 class='contact-list-name' >${person.name}</h1>
   <h2 class='contact-list-number'>${person.title}</h2>
 </div>`;
-
-console.log(person.id)
 
 }
 
@@ -56,27 +60,12 @@ const gallery = document.querySelector('.gallery');
 
 gallery.innerHTML = content;
 
-
-
-const call = () => {
-  // const person.id = contacts.id
-  const contactCardName = document.querySelector('.contact-card');
-  contactCardName.addEventListener('click', () => {
-    const contactName = document.querySelector('h1').textContent;
-    console.log(contactName)
-    window.alert(`WOULD YOU LIKE TO CALL ${contactName}`)
-
-    // const personId = h1.dataset.contact-listId
-
-    // console.log(person.id)
-    // window.alert(`WOULD YOU LIKE TO CALL ${personId}`)
-  })
-  ;
-}
-
-// document.querySelectorAll('.contact-list-name').forEach(('.contact-card') => {
-//   gallery.addEventListener
-
-//   })
-// })
+// Add a click event listener to each contact card
+document.querySelectorAll('.contact-card').forEach((contactCard) => {
+  contactCard.addEventListener('click', () => {
+    const name = contactCard.querySelector('.contact-list-name').textContent;
+    console.log(name);
+    window.alert(`WOULD YOU LIKE TO CALL ${name}`);
+  });
+});
 
