@@ -69,3 +69,5 @@ document.querySelectorAll('.contact-card').forEach((contactCard) => {
   });
 });
 
+/*my notes*/
+
