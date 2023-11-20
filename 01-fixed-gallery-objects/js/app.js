@@ -55,6 +55,7 @@ for (const person of contacts) {
 </div>`;
 
 }
+/*more changes*/
 
 const gallery = document.querySelector('.gallery');
 
